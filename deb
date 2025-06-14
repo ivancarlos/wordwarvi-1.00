@@ -1,0 +1,6 @@
+sudo apt update
+sudo apt install libvorbis-dev libogg-dev   # libogg-dev vem de brinde, mas já garantimos
+
+sudo apt install libgtk2.0-dev
+sudo apt install portaudio19-dev libvorbis-dev   # libogg-dev vem como dependência
+
