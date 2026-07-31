@@ -1,12 +1,19 @@
 return {
   tasks = {
-    ["build"] = {
+    ["Build"] = {
       command = function()
         require("overseer").run_template({
           name = "[overseer] make",
         })
       end,
       condition = require("yabs.conditions").file_exists("Makefile"),
+      type = "lua",
+    },
+    ["Run"] = {
+      command = function()
+        require("config.neovim_dev").app("./wordwarvi")
+      end,
+      condition = require("yabs.conditions").file_exists("./wordwarvi"),
       type = "lua",
     },
   },
