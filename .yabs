@@ -1,0 +1,13 @@
+return {
+  tasks = {
+    ["build"] = {
+      command = function()
+        require("overseer").run_template({
+          name = "[overseer] make",
+        })
+      end,
+      condition = require("yabs.conditions").file_exists("Makefile"),
+      type = "lua",
+    },
+  },
+}
